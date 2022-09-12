@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:TipCalculator"
+             x:Class="TipCalculator.MainPage">
+
+    <VerticalStackLayout Spacing="10">
+
+        <HorizontalStackLayout HorizontalOptions="Start"
+                               Spacing="50">
+            
+        <Label Text="Bill" />
+        <Entry x:Name="billInput" Placeholder="Enter Amount" Keyboard="Numeric" />
+
+        </HorizontalStackLayout >
+
+        <HorizontalStackLayout>
+            <Label Text="Tip"   />
+            <Label x:Name="tipOutput" Text="0.00" />
+
+        </HorizontalStackLayout>
+        
+        <HorizontalStackLayout HorizontalOptions="Start">
+             <Label Text="Total" />
+        <Label x:Name="totalOutput" Text="0.00" />
+
+        </HorizontalStackLayout>
+       
+        <HorizontalStackLayout HorizontalOptions="Start">
+            <Label Text="Tip Percentage" />
+        <Label x:Name="tipPercent" Text="15%" />
+
+        </HorizontalStackLayout>
+        
+        <Slider x:Name="tipPercentSlider" Minimum="0" Maximum="100" Value="15" />
+
+        <HorizontalStackLayout HorizontalOptions="Center">
+            <Button Text="15%" Clicked="OnNormalTip" />
+        <Button Text="20%" Clicked="OnGenerousTip" />
+
+        </HorizontalStackLayout>
+        
+        <HorizontalStackLayout HorizontalOptions="Center">
+            <Button x:Name="roundDown" Text="Round Down" />
+        <Button x:Name="roundUp"   Text="Round Up" />
+
+        </HorizontalStackLayout>
+        
+
+    </VerticalStackLayout>
+
+</ContentPage>
